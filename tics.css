@@ -1,0 +1,280 @@
+nav {
+    height: 120px;
+    background-color: rgb(63, 58, 58);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav img {
+    height: 120px;
+}
+
+nav h3 {
+    margin: 10px;
+    padding: 10px;
+    color: rgb(216, 183, 142);
+    font-size: 30px;
+}
+
+body {
+    background-color: black;
+}
+
+#complete {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#game {
+    margin: 30px;
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 0.8vmin solid rgba(196, 100, 33, 0.8);
+}
+
+.box {
+    height: 19vmin;
+    width: 19vmin;
+    background-color: rgba(223, 180, 91, 0.99);
+    border: 0.8vmin solid rgba(196, 100, 33, 0.8);
+    font-size: 16vmin;
+    color: black;
+    transition: 0.2s;
+}
+
+.a4x4 {
+    height: 14vmin;
+    width: 14vmin;
+    background-color: rgba(223, 180, 91, 0.99);
+    border: 0.8vmin solid rgba(196, 100, 33, 0.8);
+    font-size: 16vmin;
+    color: black;
+    display: none;
+    transition: 0.2s;
+}
+
+.a5x5 {
+    height: 11vmin;
+    width: 11vmin;
+    background-color: rgba(223, 180, 91, 0.99);
+    border: 0.8vmin solid rgba(196, 100, 33, 0.8);
+    font-size: 16vmin;
+    color: black;
+    display: none;
+    transition: 0.2s;
+}
+
+#sizeselect {
+    width: 20vmin;
+    padding: 2vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: rgb(216, 183, 142);
+    font-size: 3.5vmin;
+}
+
+#players {
+    width: 20vmin;
+    padding: 2vmin;
+    display: flex;
+    flex-direction: column;
+}
+
+.siz {
+    height: 4vmin;
+    width: 25vmin;
+    font-size: 2.5vmin;
+    transition: 0.3s;
+}
+
+.pl {
+    height: 4vmin;
+    width: 25vmin;
+    transition: 0.3s;
+    font-size: 2.5vmin;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background-color: rgb(255, 191, 0);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vmin;
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    background-color: rgb(255, 174, 0);
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+#s3, #multi{
+    background-color: yellow;
+}
+
+
+.modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-close {
+    padding: 0.5rem 0.7rem;
+    background: #eee;
+    border-radius: 10%;
+}
+
+.modal h3 {
+    font-size: 5vmin;
+    color: black;
+}
+
+#modaltop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#countdown {
+    color: rgb(43, 0, 255);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+#scores {
+    padding: 5vmin;
+}
+
+table,
+th,
+td {
+    border: 2px solid rgb(234, 106, 15);
+    background-color: rgb(248, 187, 58);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 2.5vmin;
+}
+
+td {
+    width: 20vmin;
+    height: 4vmin;
+}
+
+#resetscr, #saveNames,#reset {
+    margin: 2vmin;
+    width: 15vmin;
+    height: 4vmin;
+    font-size: 2.5vmin;
+    transition: 0.3s;
+}
+
+#saveNames{
+    font-size: 2vmin;
+}
+
+#scores {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div{
+    color: bisque;
+    font-size: 3vmin;
+}
+
+#ren{
+    display: flex;
+    flex-direction: column;
+    font-size: 3.5vmin;
+    align-items: center;
+    margin: 5vmin;
+}
+
+#ren input{
+    width: 20vmin;
+    height: 2.5vmin;
+    margin: 0.3rem;
+}
+
+@media (max-width: 768px) {
+
+    .siz,
+    .pl {
+        width: 35vmin;
+        height: 5vmin;
+        font-size: 3vmin;
+    }
+
+    #reset,
+    #resetscr, #saveNames {
+        width: 22.5vmin;
+        height: 5.5vmin;
+        font-size: 3.7vmin;
+        margin: 5vmin;
+    }
+
+    #saveNames{
+        font-size: 3vmin
+    }
+
+    td {
+        width: 30vmin;
+        height: 6vmin;
+        font-size: 3.7vmin;
+    }
+
+    #options{
+        transform: translateX(-6vmin);
+    }
+
+    #game{
+        transform: scale(1.2);
+    }
+
+    h2,#ren{
+        font-size: 5vmin;
+    }
+}

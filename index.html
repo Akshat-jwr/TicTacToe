@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="tics.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <img src="ttt.jpg" alt="">
+        <h3>Tic-Tac-Toe</h3>
+    </nav>
+    <div id="options">
+        <div id="sizeselect">
+            <h2>Select grid:</h2>
+            <button class="siz" id="s3">3 X 3</button>
+            <button class="siz" id="s4">4 X 4</button>
+            <button class="siz" id="s5">5 X 5</button>
+        </div>
+        <div id="players">
+            <h2>Select Mode:</h2>
+            <button class="pl" id="multi">Multi Player</button>
+            <button class="pl" id="single">Single Player</button>
+        </div>
+    </div>
+    <div id="complete">
+        <div>
+            <h2 id="turnindicator"></h2>
+        </div>
+        <div id="game">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="a4x4"></button>
+            <button class="a4x4"></button>
+            <button class="a4x4"></button>
+            <button class="a4x4"></button>
+            <button class="a4x4"></button>
+            <button class="a4x4"></button>
+            <button class="a4x4"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+            <button class="a5x5"></button>
+        </div>
+        <div>
+            <button id="reset">Reset</button>
+        </div>
+        <section class="modal hidden">
+            <div id="modaltop">
+                <div class="flex">
+                    <button class="btn-close">New game</button>
+                </div>
+                <div class="flex">
+                    <h2 id="countdown">5</h2>
+                </div>
+            </div>
+            <div>
+                <h3 id="playerwin"></h3>
+            </div>
+        </section>
+    </div>
+    <div class="overlay hidden"></div>
+    <div id="scores">
+        <h2>Scorecard:</h2>
+        <div id="playerscore">
+            <table>
+                <tr>
+                    <td></td>
+                    <td id="player1">Player 1</td>
+                    <td id="player2">Player 2</td>
+                </tr>
+                <tr>
+                    <td>Wins:</td>
+                    <td class="win1">0</td>
+                    <td class="win2">0</td>
+                </tr>
+                <tr>
+                    <td>Losses:</td>
+                    <td class="win2">0</td>
+                    <td class="win1">0</td>
+                </tr>
+                <tr>
+                    <td>Draws:</td>
+                    <td class="draws">0</td>
+                    <td class="draws">0</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <button id="resetscr">Reset</button>
+        </div>
+        <div id="ren">
+            Rename: 
+            <input type="text" id="player1Name" value="Player 1" placeholder="Enter Player 1 Name">
+            <input type="text" id="player2Name" value="Player 2" placeholder="Enter Player 2 Name">
+            <button id="saveNames">Save Names</button>
+        </div>
+    </div>
+</body>
+<script src="tacs.js"></script>
+
+</html>

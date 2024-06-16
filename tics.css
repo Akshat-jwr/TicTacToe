@@ -187,6 +187,10 @@ button:hover {
     padding: 5vmin;
 }
 
+.box:hover{
+    background-color: rgb(255, 191, 0);
+}
+
 table,
 th,
 td {

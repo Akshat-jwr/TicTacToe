@@ -189,17 +189,19 @@ indi.innerText = `${play1}\'s turn`;
 
 function handleClick(event) {
     console.log("button");
-    const box = event.target;
+    const bo = event.target;
     if (chance0) {
-        box.innerText = "O";
+        console.log("Button O");
+        bo.innerText = "O";
         chance0 = false;
         indi.innerText = `${play2}\'s turn`;
     } else {
-        box.innerText = "X";
+        console.log("Button X");
+        bo.innerText = "X";
         chance0 = true;
         indi.innerText = `${play1}\'s turn`;
     }
-    box.disabled = true;
+    bo.disabled = true;
     checkWinner();
 }
 
@@ -266,7 +268,8 @@ function checkWinner() {
         }
         if (winn == 1 && !isdraw()) {
             while (true) {
-                let rand = Math.floor(Math.random()*8);
+                let rand = Math.floor(Math.random()*(n*n-1));
+                console.log("Random",rand);
                 if (boxess[rand].innerText == '') {
                     console.log("trying to click!");
                     boxess[rand].innerText='X';

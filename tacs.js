@@ -9,6 +9,7 @@ const playerwin = document.querySelector("#playerwin");
 const win1 = document.querySelectorAll(".win1");
 const win2 = document.querySelectorAll(".win2");
 const draws = document.querySelectorAll(".draws");
+const boxeshover = document.querySelectorAll(".box:hover");
 
 let chance0 = true;
 let win_conditions = [];
@@ -228,7 +229,6 @@ function isdraw() {
 addEventListeners();
 
 function checkWinner() {
-
     if (!chance0 && sing) {
         let winn = 1;
         for (let x of win_conditions) {
@@ -258,30 +258,30 @@ function checkWinner() {
             if (counto == n - 1 || countx == n - 1) {
                 if (countt == 1) {
                     console.log("trying to click!");
-                    boxess[x[blank]].innerText='X';
-                    boxess[x[blank]].disabled=true;
-                    chance0=true;
+                    boxess[x[blank]].innerText = 'X';
+                    boxess[x[blank]].disabled = true;
+                    chance0 = true;
                     winn = 0;
                     break;
                 }
             }
         }
+
         if (winn == 1 && !isdraw()) {
             while (true) {
-                let rand = Math.floor(Math.random()*(n*n-1));
-                console.log("Random",rand);
+                let rand = Math.floor(Math.random() * (n * n - 1));
+                console.log("Random", rand);
                 if (boxess[rand].innerText == '') {
                     console.log("trying to click!");
-                    boxess[rand].innerText='X';
-                    boxess[rand].disabled=true;
-                    chance0=true;
+                    boxess[rand].innerText = 'X';
+                    boxess[rand].disabled = true;
+                    chance0 = true;
                     break;
                 }
             }
         }
         indi.innerText = `${play1}\'s turn`;
-}
-
+    }
     let didanywin = 0;
     for (let x of win_conditions) {
         let win = 1;
@@ -365,6 +365,9 @@ function resetbtn() {
         box.disabled = false;
         box.style.backgroundColor = 'rgba(223, 180, 91, 0.99)';
     }
+    for (let yess of boxeshover) {
+        box.style.backgroundColor = 'rgb(255, 191, 0))';
+    }
     chance0 = true;
     indi.innerText = `${play1}\'s turn`;
     time = 4;
@@ -433,8 +436,21 @@ const single = document.querySelector("#single");
 const multi = document.querySelector("#multi");
 single.addEventListener('click', singlePlayerMode);
 
+if (localStorage.getItem("single") == "1") {
+    sing = true;
+    localStorage.setItem("single", "1");
+    single.style.backgroundColor = 'yellow';
+    multi.style.backgroundColor = 'white';
+    resetbtn();
+    document.getElementById('player2').innerText = "Computer";
+    document.getElementById('player2Name').style.display = 'none';
+    document.getElementById('player2Name').innerText = 'Computer';
+    play2 = 'Computer';
+}
+
 function singlePlayerMode() {
     sing = true;
+    localStorage.setItem("single", "1");
     single.style.backgroundColor = 'yellow';
     multi.style.backgroundColor = 'white';
     resetbtn();
@@ -449,6 +465,7 @@ multi.addEventListener('click', multiPlayerMode);
 
 function multiPlayerMode() {
     sing = false;
+    localStorage.setItem("single", "0");
     multi.style.backgroundColor = 'yellow';
     single.style.backgroundColor = 'white';
     resetbtn();
